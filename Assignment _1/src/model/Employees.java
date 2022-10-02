@@ -18,7 +18,7 @@ public class Employees {
     private String TeamInfo;
     private String PositionTitle;
     private String EmailAddress;
-    private int CellPhone;
+    private int CellPhonenumber;
     private String EmployeeId;
 
     public String getName() {
@@ -85,12 +85,12 @@ public class Employees {
         this.EmailAddress = EmailAddress;
     }
 
-    public int getCellPhone() {
-        return CellPhone;
+    public int getCellPhonenumber() {
+        return CellPhonenumber;
     }
 
-    public void setCellPhone(int CellPhone) {
-        this.CellPhone = CellPhone;
+    public void setCellPhonenumber(int CellPhonenumber) {
+        this.CellPhonenumber = CellPhonenumber;
     }
 
     public String getEmployeeId() {
@@ -100,6 +100,17 @@ public class Employees {
     public void setEmployeeId(String EmployeeId) {
         this.EmployeeId = EmployeeId;
     }
+    
+    
+    
+    
+    
+    @Override
+    public String toString(){
+        return name;
+    }
+
+   
 
    
     
