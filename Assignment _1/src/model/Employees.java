@@ -20,7 +20,15 @@ public class Employees {
     private String EmailAddress;
     private int CellPhonenumber;
     private String EmployeeId;
+    private String ImagePath;
 
+    public String getImagePath() {
+        return ImagePath;
+    }
+
+    public void setImagePath(String ImagePath) {
+        this.ImagePath = ImagePath;
+    }
     public String getName() {
         return name;
     }
