@@ -18,7 +18,7 @@ public class Employees {
     private String TeamInfo;
     private String PositionTitle;
     private String EmailAddress;
-    private int CellPhonenumber;
+    private String CellPhonenumber;
     private String EmployeeId;
     private String ImagePath;
 
@@ -93,11 +93,11 @@ public class Employees {
         this.EmailAddress = EmailAddress;
     }
 
-    public int getCellPhonenumber() {
+    public String getCellPhonenumber() {
         return CellPhonenumber;
     }
 
-    public void setCellPhonenumber(int CellPhonenumber) {
+    public void setCellPhonenumber(String CellPhonenumber) {
         this.CellPhonenumber = CellPhonenumber;
     }
 
