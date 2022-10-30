@@ -77,14 +77,14 @@ public class VitalSignReportJPanel extends javax.swing.JPanel {
                 
             }
             
-            else if(reportList.get(i).getCommunity().equals("kandivali")){
+            else if(reportList.get(i).getCommunity().equals("West Salem")){
                 totalE++;
                 if(reportList.get(i).hasVitalSigns()){
                     countE++;
                 }
                 
             }
-            else if(reportList.get(i).getCommunity().equals("borivali")){
+            else if(reportList.get(i).getCommunity().equals("South Salem")){
                 totalF++;
                 if(reportList.get(i).hasVitalSigns()){
                     countF++;
@@ -92,14 +92,14 @@ public class VitalSignReportJPanel extends javax.swing.JPanel {
                 
             }
             
-            else if(reportList.get(i).getCommunity().equals("dhoni")){
+            else if(reportList.get(i).getCommunity().equals("Barne Barton")){
                 totalG++;
                 if(reportList.get(i).hasVitalSigns()){
                     countG++;
                 }
                 
             }
-            else if(reportList.get(i).getCommunity().equals("raina")){
+            else if(reportList.get(i).getCommunity().equals("Beacon Park")){
                 totalH++;
                 if(reportList.get(i).hasVitalSigns()){
                     countH++;

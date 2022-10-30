@@ -157,7 +157,7 @@ public class CommunityLogin extends javax.swing.JPanel {
             if(Username.equals("mumbai") && Password.equals("Mumbai@123")){
           
                           
-                MumbaiCommunity MumbaiCommunity = new MumbaiCommunity (userProcessContainer, personDirectory);
+                SalemCommunity MumbaiCommunity = new SalemCommunity (userProcessContainer, personDirectory);
                 userProcessContainer.add("MumbaiCommunity", MumbaiCommunity);
                 CardLayout layout=(CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);

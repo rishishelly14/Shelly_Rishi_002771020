@@ -17,18 +17,18 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author rishi
  */
-public class MumbaiCommunity extends javax.swing.JPanel {
+public class SalemCommunity extends javax.swing.JPanel {
 
     /**
-     * Creates new form MumbaiCommunity
+     * Creates new form SalemCommunity
      */
     
     private PersonDirectory personDirectory;
     private JPanel userProcessContainer;
-    public MumbaiCommunity() {
+    public SalemCommunity() {
     }
     
-    public MumbaiCommunity(JPanel userProcessContainer, PersonDirectory personDirectory) {
+    public SalemCommunity(JPanel userProcessContainer, PersonDirectory personDirectory) {
         initComponents();
         
         this.userProcessContainer = userProcessContainer;
@@ -68,12 +68,12 @@ public class MumbaiCommunity extends javax.swing.JPanel {
             return;
         }
             Object[] row = new Object[8];
-            row[0] = "borivali";
+            row[0] = "West Salem";
             row[1]= ""+totalA;
             row[2]= ""+countA;
            // row[3] = (countA/totalA)*100;
             model.addRow(row);
-            row[0] = "kandivali";
+            row[0] = "South Salem";
             row[1]= ""+totalB;
             row[2]= ""+countB;
             

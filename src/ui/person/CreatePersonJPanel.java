@@ -104,14 +104,14 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
 
         personCommunityJTextField.setText("Community:");
 
-        personCommunityjComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Roxbury", "Fenway", "Downtown", "Kenmore", "kandivali", "borivali", "raina ", "dhoni", " " }));
+        personCommunityjComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Roxbury", "Fenway", "Downtown", "Kenmore", "West Salem", "South Salem", "raina ", "dhoni", " " }));
         personCommunityjComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 personCommunityjComboBoxActionPerformed(evt);
             }
         });
 
-        personCityCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "boston", "mumbai", "chennai", " " }));
+        personCityCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "Salem", "Plymouth", " " }));
         personCityCombobox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 personCityComboboxActionPerformed(evt);

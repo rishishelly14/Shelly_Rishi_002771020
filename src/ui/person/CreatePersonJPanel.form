@@ -181,8 +181,8 @@
             <StringItem index="1" value="Fenway"/>
             <StringItem index="2" value="Downtown"/>
             <StringItem index="3" value="Kenmore"/>
-            <StringItem index="4" value="kandivali"/>
-            <StringItem index="5" value="borivali"/>
+            <StringItem index="4" value="West Salem"/>
+            <StringItem index="5" value="South Salem"/>
             <StringItem index="6" value="raina "/>
             <StringItem index="7" value="dhoni"/>
             <StringItem index="8" value=" "/>
@@ -200,9 +200,9 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
-            <StringItem index="0" value="boston"/>
-            <StringItem index="1" value="mumbai"/>
-            <StringItem index="2" value="chennai"/>
+            <StringItem index="0" value="Boston"/>
+            <StringItem index="1" value="Salem"/>
+            <StringItem index="2" value="Plymouth"/>
             <StringItem index="3" value=" "/>
           </StringArray>
         </Property>
