@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package ui;
+package ui.person;
 
 import java.awt.CardLayout;
 import javax.swing.InputVerifier;
@@ -89,6 +89,11 @@ public class enterdataperson extends javax.swing.JPanel {
 
         txtcity.setEditable(false);
         txtcity.setText("BOSTON");
+        txtcity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcityActionPerformed(evt);
+            }
+        });
 
         btnback.setText("<<BACK");
         btnback.addActionListener(new java.awt.event.ActionListener() {
@@ -112,6 +117,12 @@ public class enterdataperson extends javax.swing.JPanel {
         });
 
         lblhospital1.setText("Hospital:");
+
+        hospital1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hospital1ActionPerformed(evt);
+            }
+        });
 
         lbldoctor1.setText("Doctor:");
 
@@ -154,17 +165,21 @@ public class enterdataperson extends javax.swing.JPanel {
                                     .addComponent(lbldoctor1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(lblhospital1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(lblcommunity, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE))))
-                        .addGap(23, 23, 23)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtname)
-                            .addComponent(txtage)
-                            .addComponent(txtweight)
-                            .addComponent(txtaddress)
-                            .addComponent(txtcity)
-                            .addComponent(locality1, 0, 222, Short.MAX_VALUE)
-                            .addComponent(hospital1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(doctor, 0, 222, Short.MAX_VALUE))))
-                .addContainerGap(256, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtname)
+                                    .addComponent(txtage)
+                                    .addComponent(txtweight)
+                                    .addComponent(txtaddress)
+                                    .addComponent(txtcity)
+                                    .addComponent(hospital1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(doctor, 0, 222, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(44, 44, 44)
+                                .addComponent(locality1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(235, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,6 +313,14 @@ public class enterdataperson extends javax.swing.JPanel {
     private void doctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doctorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_doctorActionPerformed
+
+    private void hospital1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hospital1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hospital1ActionPerformed
+
+    private void txtcityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcityActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

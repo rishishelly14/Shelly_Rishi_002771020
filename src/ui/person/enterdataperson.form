@@ -53,20 +53,27 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtname" max="32767" attributes="0"/>
-                          <Component id="txtage" max="32767" attributes="0"/>
-                          <Component id="txtweight" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtaddress" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtcity" alignment="0" max="32767" attributes="0"/>
-                          <Component id="locality1" alignment="0" pref="222" max="32767" attributes="0"/>
-                          <Component id="hospital1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="doctor" alignment="0" pref="222" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtname" max="32767" attributes="0"/>
+                                  <Component id="txtage" max="32767" attributes="0"/>
+                                  <Component id="txtweight" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtaddress" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtcity" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="hospital1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="doctor" alignment="0" pref="222" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                              <Component id="locality1" min="-2" pref="222" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="256" max="32767" attributes="0"/>
+              <EmptySpace pref="235" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -177,6 +184,9 @@
         <Property name="editable" type="boolean" value="false"/>
         <Property name="text" type="java.lang.String" value="BOSTON"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtcityActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnback">
       <Properties>
@@ -223,6 +233,9 @@
           <StringArray count="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hospital1ActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
