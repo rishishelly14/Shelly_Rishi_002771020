@@ -111,7 +111,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
             }
         });
 
-        personCityCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "Salem", "Plymouth", " " }));
+        personCityCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "Salem", " " }));
         personCityCombobox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 personCityComboboxActionPerformed(evt);
@@ -249,7 +249,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         try{
-            if (personCityCombobox.getSelectedItem().equals("boston"))
+            if (personCityCombobox.getSelectedItem().equals("Boston"))
             {   personCommunityjComboBox.removeAllItems();
 
                 personCommunityjComboBox.addItem("Roxbury");
@@ -259,23 +259,15 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
 
             }
             else
-            if (personCityCombobox.getSelectedItem().equals("mumbai"))
+            if (personCityCombobox.getSelectedItem().equals("Salem"))
             {   personCommunityjComboBox.removeAllItems();
 
-                personCommunityjComboBox.addItem("kandivali");
-                personCommunityjComboBox.addItem("borivali");
+                personCommunityjComboBox.addItem("West Salem");
+                personCommunityjComboBox.addItem("South Salem");
                 
 
             }
-            else
-            if (personCityCombobox.getSelectedItem().equals("chennai"))
-            {   personCommunityjComboBox.removeAllItems();
-
-                personCommunityjComboBox.addItem("dhoni");
-                personCommunityjComboBox.addItem("raina");
-                
-
-            }
+           
         }
         catch(Exception e)
         {

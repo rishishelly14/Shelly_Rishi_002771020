@@ -5,12 +5,13 @@
 */
 package ui;
 
-import ui.patient.PatientManagerWorkAreaJPanel;
+//import ui.patient.PatientManagerWorkAreaJPanel;
 import model.PersonDirectory;
 import java.awt.CardLayout;
 import ui.patient.CommunityLogin;
 import ui.patient.VitalSignReportJPanel;
 import ui.person.ManagePersonsJPanel;
+import ui.patient.Login;
 
 /**
  *
@@ -122,11 +123,10 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void patientManagerJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientManagerJButtonActionPerformed
         // TODO add your handling code here:
-        PatientManagerWorkAreaJPanel pmwaJPanel=
-                new PatientManagerWorkAreaJPanel(userProcessContainer, personDirectory);
-        userProcessContainer.add("pmwaJPanel", pmwaJPanel);
-        CardLayout layout=(CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        Login Login = new Login(userProcessContainer, personDirectory);
+           userProcessContainer.add("Login", Login);
+           CardLayout layout =(CardLayout) userProcessContainer.getLayout();
+           layout.next(userProcessContainer);
     }//GEN-LAST:event_patientManagerJButtonActionPerformed
 
     private void managePersonsJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_managePersonsJButtonActionPerformed

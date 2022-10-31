@@ -113,7 +113,7 @@ public class SalemCommunity extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(vieReportJTable);
 
-        jLabel2.setText("Mumbai Community ");
+        jLabel2.setText("Salem Community ");
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +134,7 @@ public class SalemCommunity extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addComponent(btnBack)))
-                .addContainerGap(323, Short.MAX_VALUE))
+                .addContainerGap(336, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(72, 72, 72)

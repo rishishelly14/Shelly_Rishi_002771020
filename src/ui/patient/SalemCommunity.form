@@ -34,7 +34,7 @@
                       <Component id="btnBack" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="323" max="32767" attributes="0"/>
+              <EmptySpace pref="336" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
@@ -90,7 +90,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Mumbai Community "/>
+        <Property name="text" type="java.lang.String" value="Salem Community "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnBack">

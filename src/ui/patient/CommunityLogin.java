@@ -69,7 +69,7 @@ public class CommunityLogin extends javax.swing.JPanel {
             }
         });
 
-        txtUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston Community", "Mumbai Community" }));
+        txtUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston Community", "Salem Community" }));
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +101,7 @@ public class CommunityLogin extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(49, 49, 49)
                         .addComponent(btnBack)))
-                .addContainerGap(307, Short.MAX_VALUE))
+                .addContainerGap(315, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,12 +153,12 @@ public class CommunityLogin extends javax.swing.JPanel {
             }
         }
         
-        if (UserType.equals("Mumbai Community")){
-            if(Username.equals("mumbai") && Password.equals("Mumbai@123")){
+        if (UserType.equals("Salem Community")){
+            if(Username.equals("salem") && Password.equals("Salem@123")){
           
                           
                 SalemCommunity MumbaiCommunity = new SalemCommunity (userProcessContainer, personDirectory);
-                userProcessContainer.add("MumbaiCommunity", MumbaiCommunity);
+                userProcessContainer.add("Salem Community", MumbaiCommunity);
                 CardLayout layout=(CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
                 
