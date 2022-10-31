@@ -7,7 +7,7 @@ import ui.patient.PatientManagerWorkAreaJPanel;
 import model.PersonDirectory;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
-import ui.patient.VitalSignReportJPanel;
+import ui.patient.Boston;
 import ui.person.ManagePersonsJPanel;
 import javax.swing.JPanel;
 

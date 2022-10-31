@@ -41,7 +41,7 @@ public class SalemCommunity extends javax.swing.JPanel {
         
         reportList = personDirectory.getPersonHistory();
         for (int i =0; i<len; i++){
-            if(reportList.get(i).getCommunity().equals("borivali")){
+            if(reportList.get(i).getCommunity().equals("West Salem")){
                 totalA++;
                 if(reportList.get(i).hasVitalSigns()){
                     countA++;
@@ -49,7 +49,7 @@ public class SalemCommunity extends javax.swing.JPanel {
                 
             }
             
-            else if(reportList.get(i).getCommunity().equals("kandivali")){
+            else if(reportList.get(i).getCommunity().equals("South Salem")){
                 totalB++;
                 if(reportList.get(i).hasVitalSigns()){
                     countB++;

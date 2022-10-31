@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author rishi
  */
-public class VitalSignReportJPanel extends javax.swing.JPanel {
+public class Boston extends javax.swing.JPanel {
 
     /**
      * Creates new form VitalSignReport
@@ -24,10 +24,10 @@ public class VitalSignReportJPanel extends javax.swing.JPanel {
     
     private PersonDirectory personDirectory;
     private JPanel userProcessContainer;
-    public VitalSignReportJPanel() {
+    public Boston() {
     }
 
-    public VitalSignReportJPanel(JPanel userProcessContainer, PersonDirectory personDirectory) {
+    public Boston(JPanel userProcessContainer, PersonDirectory personDirectory) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         
          initComponents();

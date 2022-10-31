@@ -9,7 +9,7 @@ import model.PersonDirectory;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import ui.patient.VitalSignReportJPanel;
+import ui.patient.Boston;
 import ui.person.ManagePersonsJPanel;
 
 /**
@@ -143,7 +143,7 @@ public class CommunityLogin extends javax.swing.JPanel {
         if (UserType.equals("Boston Community")){
             if(Username.equals("boston") && Password.equals("Boston@123")){
         
-                VitalSignReportJPanel report = new VitalSignReportJPanel(userProcessContainer, personDirectory);
+                Boston report = new Boston(userProcessContainer, personDirectory);
                 userProcessContainer.add("report",report);
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                  layout.next(userProcessContainer);

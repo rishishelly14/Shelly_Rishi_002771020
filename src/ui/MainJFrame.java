@@ -9,7 +9,7 @@ package ui;
 import model.PersonDirectory;
 import java.awt.CardLayout;
 import ui.patient.CommunityLogin;
-import ui.patient.VitalSignReportJPanel;
+import ui.patient.Boston;
 import ui.person.ManagePersonsJPanel;
 import ui.patient.Login;
 
@@ -140,7 +140,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void vitalSignReportJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vitalSignReportJButtonActionPerformed
         // TODO add your handling code here:
-//        VitalSignReportJPanel report = new VitalSignReportJPanel(userProcessContainer, personDirectory);
+//        Boston report = new Boston(userProcessContainer, personDirectory);
 //        userProcessContainer.add("report",report);
 //        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
 //        layout.next(userProcessContainer);

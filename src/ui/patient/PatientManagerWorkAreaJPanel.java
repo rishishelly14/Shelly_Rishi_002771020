@@ -150,7 +150,7 @@ public class PatientManagerWorkAreaJPanel extends javax.swing.JPanel {
     private void btnBostonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBostonActionPerformed
         // TODO add your handling code here:
         
-        VitalSignReportJPanel report = new VitalSignReportJPanel(userProcessContainer, personDirectory);
+        Boston report = new Boston(userProcessContainer, personDirectory);
                 userProcessContainer.add("report",report);
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                  layout.next(userProcessContainer);
