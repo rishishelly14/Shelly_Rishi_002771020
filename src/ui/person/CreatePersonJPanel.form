@@ -108,6 +108,9 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="personAgeJTextField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="personAgeJTextFieldActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="addPersonJButton">
       <Properties>
@@ -130,6 +133,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Person Name: "/>
       </Properties>
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="patientNameJLabelKeyPressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="AgeJLabel">
       <Properties>
@@ -137,6 +143,10 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="pesonNameJTextField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesonNameJTextFieldActionPerformed"/>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="pesonNameJTextFieldKeyPressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="backJButton">
       <Properties>

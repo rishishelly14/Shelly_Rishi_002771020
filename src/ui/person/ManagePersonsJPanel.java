@@ -12,6 +12,13 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import model.Patient;
+import model.VitalSign;
+import model.VitalSignHistory;
+import ui.patient.Boston;
+import ui.patient.ManagePatientsJPanel;
+import ui.patient.ManageVitalSignsJPanel;
+import ui.patient.SalemCommunity;
 
 /**
  *
@@ -75,6 +82,11 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
         deletePersonJButton = new javax.swing.JButton();
         searchBoxJTextField = new javax.swing.JTextField();
         createPersonJButton = new javax.swing.JButton();
+        btnSalem = new javax.swing.JButton();
+        managePatientsJButton = new javax.swing.JButton();
+        manageVitalSignsJButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        btnBoston = new javax.swing.JButton();
 
         searchPersonJButton.setText("Search Person");
         searchPersonJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -147,34 +159,85 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnSalem.setText("Salem");
+        btnSalem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalemActionPerformed(evt);
+            }
+        });
+
+        managePatientsJButton.setText("Patients Directory");
+        managePatientsJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                managePatientsJButtonActionPerformed(evt);
+            }
+        });
+
+        manageVitalSignsJButton.setText("Encounter History");
+        manageVitalSignsJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageVitalSignsJButtonActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("<<Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        btnBoston.setText("Boston");
+        btnBoston.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBostonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(searchPersonJButton)
-                        .addGap(93, 93, 93)
-                        .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(98, 98, 98)
-                        .addComponent(refreshJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(76, 76, 76)
+                                .addComponent(searchPersonJButton)
+                                .addGap(93, 93, 93)
+                                .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(98, 98, 98)
+                                .addComponent(refreshJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(createPersonJButton)
+                                .addGap(18, 18, 18)
+                                .addComponent(viewPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(editPersonJButton)
+                                .addGap(18, 18, 18)
+                                .addComponent(deletePersonJButton))
+                            .addComponent(jScrollPane1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(223, 223, 223)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(createPersonJButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(viewPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(editPersonJButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(deletePersonJButton))
-                    .addComponent(jScrollPane1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(223, 223, 223)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(170, 170, 170)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(77, 77, 77)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(managePatientsJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(manageVitalSignsJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(105, 105, 105)
+                                .addComponent(btnBoston)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnSalem)))))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -196,7 +259,17 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
                     .addComponent(searchPersonJButton)
                     .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(refreshJButton))
-                .addContainerGap(279, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addComponent(managePatientsJButton)
+                .addGap(18, 18, 18)
+                .addComponent(manageVitalSignsJButton)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBoston)
+                    .addComponent(btnSalem))
+                .addGap(27, 27, 27)
+                .addComponent(jButton1)
+                .addContainerGap(72, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -295,14 +368,63 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_createPersonJButtonActionPerformed
 
+    private void btnSalemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalemActionPerformed
+        // TODO add your handling code here:
+
+        SalemCommunity MumbaiCommunity = new SalemCommunity (userProcessContainer, personDirectory);
+        userProcessContainer.add("Salem Community", MumbaiCommunity);
+        CardLayout layout=(CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+
+    }//GEN-LAST:event_btnSalemActionPerformed
+
+    private void managePatientsJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_managePatientsJButtonActionPerformed
+        // TODO add your handling code here:
+        ManagePatientsJPanel mpJPanel=
+        new ManagePatientsJPanel(userProcessContainer, personDirectory);
+        userProcessContainer.add("mpJPanel", mpJPanel);
+        CardLayout layout=(CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_managePatientsJButtonActionPerformed
+
+    private void manageVitalSignsJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageVitalSignsJButtonActionPerformed
+        // TODO add your handling code here:
+        ManageVitalSignsJPanel mvsJPanel=
+        new ManageVitalSignsJPanel(userProcessContainer, personDirectory);
+        userProcessContainer.add("mvsJPanel", mvsJPanel);
+        CardLayout layout=(CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_manageVitalSignsJButtonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnBostonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBostonActionPerformed
+        // TODO add your handling code here:
+
+        Boston report = new Boston(userProcessContainer, personDirectory);
+        userProcessContainer.add("report",report);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+
+    }//GEN-LAST:event_btnBostonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
+    private javax.swing.JButton btnBoston;
+    private javax.swing.JButton btnSalem;
     private javax.swing.JButton createPersonJButton;
     private javax.swing.JButton deletePersonJButton;
     private javax.swing.JButton editPersonJButton;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton managePatientsJButton;
+    private javax.swing.JButton manageVitalSignsJButton;
     private javax.swing.JButton refreshJButton;
     private javax.swing.JTextField searchBoxJTextField;
     private javax.swing.JButton searchPersonJButton;

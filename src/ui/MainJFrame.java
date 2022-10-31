@@ -12,6 +12,7 @@ import ui.patient.CommunityLogin;
 import ui.patient.Boston;
 import ui.person.ManagePersonsJPanel;
 import ui.patient.Login;
+import ui.person.LoginSystem;
 
 /**
  *
@@ -55,21 +56,21 @@ public class MainJFrame extends javax.swing.JFrame {
         leftJPanel.setMinimumSize(new java.awt.Dimension(200, 700));
         leftJPanel.setPreferredSize(new java.awt.Dimension(200, 700));
 
-        patientManagerJButton.setText("Patients Directory");
+        patientManagerJButton.setText("HOSPITAL");
         patientManagerJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 patientManagerJButtonActionPerformed(evt);
             }
         });
 
-        managePersonsJButton.setText("Person Directory");
+        managePersonsJButton.setText("SYSTEM LOGIN");
         managePersonsJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 managePersonsJButtonActionPerformed(evt);
             }
         });
 
-        vitalSignReportJButton.setText("Dashboard");
+        vitalSignReportJButton.setText("COMMUNITY");
         vitalSignReportJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 vitalSignReportJButtonActionPerformed(evt);
@@ -131,11 +132,10 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void managePersonsJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_managePersonsJButtonActionPerformed
         // TODO add your handling code here:
-        ManagePersonsJPanel mpJPanel= 
-                new ManagePersonsJPanel(userProcessContainer, personDirectory);
-        userProcessContainer.add("mpJPanel", mpJPanel);
-        CardLayout layout=(CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+       LoginSystem LoginSystem = new LoginSystem(userProcessContainer, personDirectory);
+            userProcessContainer.add("LoginSystem", LoginSystem);
+            CardLayout layout =(CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
     }//GEN-LAST:event_managePersonsJButtonActionPerformed
 
     private void vitalSignReportJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vitalSignReportJButtonActionPerformed

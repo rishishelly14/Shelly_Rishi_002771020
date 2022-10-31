@@ -96,7 +96,7 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="patientManagerJButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Patients Directory"/>
+                <Property name="text" type="java.lang.String" value="HOSPITAL"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="patientManagerJButtonActionPerformed"/>
@@ -104,7 +104,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="managePersonsJButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Person Directory"/>
+                <Property name="text" type="java.lang.String" value="SYSTEM LOGIN"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="managePersonsJButtonActionPerformed"/>
@@ -112,7 +112,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="vitalSignReportJButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Dashboard"/>
+                <Property name="text" type="java.lang.String" value="COMMUNITY"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vitalSignReportJButtonActionPerformed"/>

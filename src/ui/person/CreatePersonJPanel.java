@@ -38,6 +38,8 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         personAgeJTextField.setInputVerifier(integerVerifier);
         InputVerifier stringVerifier = new StringVerifier();
         pesonNameJTextField.setInputVerifier(stringVerifier);
+        InputVerifier integerVerifier1 = new IntegerVerifier();
+        personWeightJTextField.setInputVerifier(integerVerifier1);
     }
     
     /**
@@ -68,6 +70,12 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(500, 700));
         setPreferredSize(new java.awt.Dimension(500, 700));
 
+        personAgeJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personAgeJTextFieldActionPerformed(evt);
+            }
+        });
+
         addPersonJButton.setText("Create Profile");
         addPersonJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,8 +88,24 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         jLabel1.setText("Create Person Profile");
 
         patientNameJLabel.setText("Person Name: ");
+        patientNameJLabel.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                patientNameJLabelKeyPressed(evt);
+            }
+        });
 
         AgeJLabel.setText("Age : ");
+
+        pesonNameJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pesonNameJTextFieldActionPerformed(evt);
+            }
+        });
+        pesonNameJTextField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                pesonNameJTextFieldKeyPressed(evt);
+            }
+        });
 
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -218,11 +242,48 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         personWeightJTextField.setText("");
         personAddressJTextField.setText("");
        // personCityJTextField.setText("");
+       
+     
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
     }
     private Boolean checkBlankInput()
     {
         if(pesonNameJTextField.getText().length()==0
-                ||personAgeJTextField.getText().length()==0)
+                ||personAgeJTextField.getText().length()==0 || personAddressJTextField.getText().length()==0 
+                || personWeightJTextField.getText().length()==0)
+                
+
         {
             return false;
         }
@@ -274,6 +335,36 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
             System.out.println(e);
         }
     }//GEN-LAST:event_personCityComboboxActionPerformed
+
+    private void pesonNameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesonNameJTextFieldActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_pesonNameJTextFieldActionPerformed
+
+    private void personAgeJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personAgeJTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_personAgeJTextFieldActionPerformed
+
+    private void patientNameJLabelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_patientNameJLabelKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patientNameJLabelKeyPressed
+
+    private void pesonNameJTextFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pesonNameJTextFieldKeyPressed
+        // TODO add your handling code here:
+        char C = evt.getKeyChar();
+        if (Character.isLetter(C)|| Character.isWhitespace(C) || Character.isISOControl(C)){
+        
+           pesonNameJTextField.setEditable(true);
+        
+        }
+        
+        else{
+        
+            pesonNameJTextField.setEditable(true);
+            JOptionPane.showMessageDialog(null, "Please Enter a Valid Name");
+        
+        }
+    }//GEN-LAST:event_pesonNameJTextFieldKeyPressed
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
