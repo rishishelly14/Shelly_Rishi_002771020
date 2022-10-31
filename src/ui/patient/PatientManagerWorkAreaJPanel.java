@@ -38,9 +38,14 @@ public class PatientManagerWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         managePatientsJButton = new javax.swing.JButton();
         manageVitalSignsJButton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        btnBoston = new javax.swing.JButton();
+        btnSalem = new javax.swing.JButton();
+
+        jLabel1.setText("jLabel1");
 
         setMinimumSize(new java.awt.Dimension(500, 700));
         setPreferredSize(new java.awt.Dimension(500, 700));
@@ -66,6 +71,20 @@ public class PatientManagerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnBoston.setText("Boston");
+        btnBoston.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBostonActionPerformed(evt);
+            }
+        });
+
+        btnSalem.setText("Salem");
+        btnSalem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalemActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -79,8 +98,13 @@ public class PatientManagerWorkAreaJPanel extends javax.swing.JPanel {
                             .addComponent(manageVitalSignsJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(88, 88, 88)
-                        .addComponent(jButton1)))
-                .addContainerGap(194, Short.MAX_VALUE))
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(193, 193, 193)
+                        .addComponent(btnBoston)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSalem)))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,7 +113,11 @@ public class PatientManagerWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(managePatientsJButton)
                 .addGap(18, 18, 18)
                 .addComponent(manageVitalSignsJButton)
-                .addGap(68, 68, 68)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBoston)
+                    .addComponent(btnSalem))
+                .addGap(27, 27, 27)
                 .addComponent(jButton1)
                 .addContainerGap(418, Short.MAX_VALUE))
         );
@@ -119,9 +147,32 @@ public class PatientManagerWorkAreaJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btnBostonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBostonActionPerformed
+        // TODO add your handling code here:
+        
+        VitalSignReportJPanel report = new VitalSignReportJPanel(userProcessContainer, personDirectory);
+                userProcessContainer.add("report",report);
+                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+                 layout.next(userProcessContainer);
+        
+    }//GEN-LAST:event_btnBostonActionPerformed
+
+    private void btnSalemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalemActionPerformed
+        // TODO add your handling code here:
+        
+        SalemCommunity MumbaiCommunity = new SalemCommunity (userProcessContainer, personDirectory);
+                userProcessContainer.add("Salem Community", MumbaiCommunity);
+                CardLayout layout=(CardLayout) userProcessContainer.getLayout();
+                layout.next(userProcessContainer);
+        
+    }//GEN-LAST:event_btnSalemActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBoston;
+    private javax.swing.JButton btnSalem;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton managePatientsJButton;
     private javax.swing.JButton manageVitalSignsJButton;
     // End of variables declaration//GEN-END:variables
