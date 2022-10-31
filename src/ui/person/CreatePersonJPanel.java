@@ -128,14 +128,14 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
 
         personCommunityJTextField.setText("Community:");
 
-        personCommunityjComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Roxbury", "Fenway", "Downtown", "Kenmore", "West Salem", "South Salem", "raina ", "dhoni", " " }));
+        personCommunityjComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select A City First", "Roxbury", "Fenway", "Downtown", "Kenmore", "West Salem", "South Salem", " ", " " }));
         personCommunityjComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 personCommunityjComboBoxActionPerformed(evt);
             }
         });
 
-        personCityCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "Salem", " " }));
+        personCityCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select  An Option", "Boston", "Salem", " " }));
         personCityCombobox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 personCityComboboxActionPerformed(evt);
@@ -310,6 +310,17 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         try{
+            
+            if (personCityCombobox.getSelectedItem().equals("Select  An Option"))
+            {   personCommunityjComboBox.removeAllItems();
+
+                personCommunityjComboBox.addItem("Select A City First");
+                
+
+            }
+            else
+            
+            
             if (personCityCombobox.getSelectedItem().equals("Boston"))
             {   personCommunityjComboBox.removeAllItems();
 
