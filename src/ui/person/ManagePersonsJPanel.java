@@ -47,7 +47,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             return;
         }
         for (Person person : personsList) {
-            Object[] row = new Object[3];
+            Object[] row = new Object[7];
             row[0] = person;
             row[1]= person.getAge();
             if(person.getPatient()!=null)
@@ -58,6 +58,10 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             {
                 row[2] = "Patient Not Created";
             }
+            row[3] = person.getweight();
+            row[4] = person.getAddress();
+            row[5] = person.getCity();
+            row[6] = person.getCommunity();
             model.addRow(row);
         }
     }
@@ -85,9 +89,12 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
         btnSalem = new javax.swing.JButton();
         managePatientsJButton = new javax.swing.JButton();
         manageVitalSignsJButton = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         btnBoston = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 204, 204));
+        setMinimumSize(new java.awt.Dimension(800, 600));
+
+        searchPersonJButton.setBackground(new java.awt.Color(255, 153, 153));
         searchPersonJButton.setText("Search Person");
         searchPersonJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +102,8 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             }
         });
 
+        backJButton.setBackground(new java.awt.Color(0, 0, 0));
+        backJButton.setForeground(new java.awt.Color(255, 255, 255));
         backJButton.setText("<<Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,6 +111,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             }
         });
 
+        refreshJButton.setBackground(new java.awt.Color(255, 153, 153));
         refreshJButton.setText("Refresh");
         refreshJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,11 +124,11 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Person Name", "Age", "Patient ID"
+                "Person Name", "Age", "Patient ID", "Weight", "Address", "City", "Community"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false, true, true, true, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -131,6 +141,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Persons Directory");
 
+        editPersonJButton.setBackground(new java.awt.Color(255, 153, 153));
         editPersonJButton.setText("Edit Person");
         editPersonJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,6 +149,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewPersonJButton.setBackground(new java.awt.Color(255, 153, 153));
         viewPersonJButton.setText("View Person");
         viewPersonJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,6 +157,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             }
         });
 
+        deletePersonJButton.setBackground(new java.awt.Color(255, 153, 153));
         deletePersonJButton.setText("Delete Person");
         deletePersonJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,6 +165,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             }
         });
 
+        createPersonJButton.setBackground(new java.awt.Color(255, 153, 153));
         createPersonJButton.setText("Create Person");
         createPersonJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,6 +173,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnSalem.setBackground(new java.awt.Color(255, 153, 153));
         btnSalem.setText("Salem");
         btnSalem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,6 +181,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             }
         });
 
+        managePatientsJButton.setBackground(new java.awt.Color(255, 153, 153));
         managePatientsJButton.setText("Patients Directory");
         managePatientsJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +189,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             }
         });
 
+        manageVitalSignsJButton.setBackground(new java.awt.Color(255, 153, 153));
         manageVitalSignsJButton.setText("Encounter History");
         manageVitalSignsJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,13 +197,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setText("<<Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
+        btnBoston.setBackground(new java.awt.Color(255, 153, 153));
         btnBoston.setText("Boston");
         btnBoston.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,75 +212,74 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(290, 290, 290)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(76, 76, 76)
-                                .addComponent(searchPersonJButton)
-                                .addGap(93, 93, 93)
-                                .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(98, 98, 98)
-                                .addComponent(refreshJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(createPersonJButton)
-                                .addGap(18, 18, 18)
+                                .addGap(141, 141, 141)
                                 .addComponent(viewPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(editPersonJButton)
                                 .addGap(18, 18, 18)
-                                .addComponent(deletePersonJButton))
-                            .addComponent(jScrollPane1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(223, 223, 223)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(deletePersonJButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(refreshJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(createPersonJButton)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
+                        .addGap(493, 493, 493)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 440, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(480, 480, 480)
+                        .addComponent(searchPersonJButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(529, 529, 529)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(77, 77, 77)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(managePatientsJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(manageVitalSignsJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jButton1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(105, 105, 105)
                                 .addComponent(btnBoston)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnSalem)))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnSalem))
+                            .addComponent(managePatientsJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(manageVitalSignsJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(34, 34, 34)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(viewPersonJButton)
                     .addComponent(editPersonJButton)
                     .addComponent(deletePersonJButton)
-                    .addComponent(backJButton)
-                    .addComponent(createPersonJButton))
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(searchPersonJButton)
-                    .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(createPersonJButton)
                     .addComponent(refreshJButton))
-                .addGap(52, 52, 52)
-                .addComponent(managePatientsJButton)
-                .addGap(18, 18, 18)
-                .addComponent(manageVitalSignsJButton)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBoston)
-                    .addComponent(btnSalem))
-                .addGap(27, 27, 27)
-                .addComponent(jButton1)
-                .addContainerGap(72, Short.MAX_VALUE))
+                    .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchPersonJButton))
+                .addGap(50, 50, 50)
+                .addComponent(managePatientsJButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(manageVitalSignsJButton)
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSalem)
+                    .addComponent(btnBoston))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addComponent(backJButton)
+                .addGap(58, 58, 58))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -303,8 +313,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
     private void editPersonJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editPersonJButtonActionPerformed
         // TODO add your handling code here:
         
-        if(editPersonJButton.isEnabled()) 
-        {
+        
         int selectedRow= viewPersonsJTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(this, "Please select a row from table.", 
@@ -320,7 +329,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
         editPersonJButton.setEnabled(false);
         
-        }
+        
     }//GEN-LAST:event_editPersonJButtonActionPerformed
 
     private void viewPersonJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPersonJButtonActionPerformed
@@ -396,12 +405,6 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_manageVitalSignsJButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void btnBostonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBostonActionPerformed
         // TODO add your handling code here:
 
@@ -420,7 +423,6 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
     private javax.swing.JButton createPersonJButton;
     private javax.swing.JButton deletePersonJButton;
     private javax.swing.JButton editPersonJButton;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton managePatientsJButton;
