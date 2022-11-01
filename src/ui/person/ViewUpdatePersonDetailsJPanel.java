@@ -39,13 +39,25 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
     private void addVerifiers() {
         InputVerifier integerVerifier = new IntegerVerifier();
         personAgeJTextField.setInputVerifier(integerVerifier);
+         InputVerifier integerVerifierWeight = new IntegerVerifier();
+        personWeightJTextField.setInputVerifier(integerVerifierWeight);
         InputVerifier stringVerifier = new StringVerifier();
         personNameJTextField.setInputVerifier(stringVerifier);
+        InputVerifier stringVerifierAdd = new StringVerifier();
+        personAddressJTextField.setInputVerifier(stringVerifierAdd);
+        InputVerifier stringVerifierCity = new StringVerifier();
+        personCityJTextField.setInputVerifier(stringVerifierCity);
+        InputVerifier stringVerifierCommunity = new StringVerifier();
+        personCommunityJTextField.setInputVerifier(stringVerifierCommunity);
     }
 
     private void populatePatientDetails() {
         personNameJTextField.setText(person.getPersonName());
         personAgeJTextField.setText(String.valueOf(person.getAge()));
+        personWeightJTextField.setText(String.valueOf(person.getweight()));
+        personAddressJTextField.setText(person.getAddress());
+        personCityJTextField.setText(person.getCity());
+        personCommunityJTextField.setText(person.getCommunity());
     }
 
     /**
@@ -65,6 +77,14 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
         backJButton = new javax.swing.JButton();
         editJButton = new javax.swing.JButton();
         saveJButton = new javax.swing.JButton();
+        AgeJLabel1 = new javax.swing.JLabel();
+        AgeJLabel2 = new javax.swing.JLabel();
+        AgeJLabel3 = new javax.swing.JLabel();
+        AgeJLabel4 = new javax.swing.JLabel();
+        personWeightJTextField = new javax.swing.JTextField();
+        personAddressJTextField = new javax.swing.JTextField();
+        personCityJTextField = new javax.swing.JTextField();
+        personCommunityJTextField = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 204, 204));
         setMinimumSize(new java.awt.Dimension(500, 700));
@@ -103,16 +123,18 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
             }
         });
 
+        AgeJLabel1.setText("Weight");
+
+        AgeJLabel2.setText("Address");
+
+        AgeJLabel3.setText("City");
+
+        AgeJLabel4.setText("Community");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(440, 440, 440)
-                .addComponent(editJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(saveJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -125,31 +147,62 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(AgeJLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(patientNameJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(patientNameJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(AgeJLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(AgeJLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(AgeJLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(AgeJLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(189, 189, 189)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(personAgeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(personNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(personNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(personWeightJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(personAddressJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(personCityJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(personCommunityJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(429, 429, 429)
+                        .addComponent(editJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
+                        .addComponent(saveJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(455, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(69, 69, 69)
-                .addComponent(jLabel1)
-                .addGap(67, 67, 67)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(personNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(patientNameJLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(personAgeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AgeJLabel))
-                .addGap(90, 90, 90)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(67, 67, 67)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(personNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(patientNameJLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(personAgeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AgeJLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AgeJLabel1)
+                            .addComponent(personWeightJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(AgeJLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(AgeJLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(personAddressJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(personCityJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(AgeJLabel4)
+                    .addComponent(personCommunityJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveJButton)
                     .addComponent(editJButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addComponent(backJButton)
                 .addGap(180, 180, 180))
         );
@@ -164,9 +217,17 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
         if (isEdit) {
             personNameJTextField.setEnabled(true);
             personAgeJTextField.setEnabled(true);
+            personWeightJTextField.setEnabled(true);
+            personAddressJTextField.setEnabled(true);
+            personCityJTextField.setEnabled(true);
+            personCommunityJTextField.setEnabled(true);
         } else {
             personNameJTextField.setEnabled(false);
             personAgeJTextField.setEnabled(false);
+            personWeightJTextField.setEnabled(false);
+            personAddressJTextField.setEnabled(false);
+            personCityJTextField.setEnabled(false);
+            personCommunityJTextField.setEnabled(false);
         }
     }
 
@@ -175,7 +236,11 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
 
         if (checkBlankInput()) {
             person.setAge(Integer.parseInt(personAgeJTextField.getText()));
+            person.setweight(Integer.parseInt(personWeightJTextField.getText()));
             person.setPersonName(personNameJTextField.getText());
+            person.setAddress(personAddressJTextField.getText());
+            person.setCity(personCityJTextField.getText());
+            person.setCommunity(personCommunityJTextField.getText());
             JOptionPane.showMessageDialog(this, "Person updated!!",
                     "Update", JOptionPane.INFORMATION_MESSAGE);
             modifyTextFields(false);
@@ -187,7 +252,7 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_saveJButtonActionPerformed
     private Boolean checkBlankInput() {
         if (personAgeJTextField.getText().length() == 0
-                || personNameJTextField.getText().length() == 0) {
+                || personNameJTextField.getText().length() == 0 || personWeightJTextField.getText().length() == 0|| personAddressJTextField.getText().length() == 0|| personCityJTextField.getText().length() == 0|| personCommunityJTextField.getText().length() == 0) {
             return false;
         } else {
             return true;
@@ -203,12 +268,20 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AgeJLabel;
+    private javax.swing.JLabel AgeJLabel1;
+    private javax.swing.JLabel AgeJLabel2;
+    private javax.swing.JLabel AgeJLabel3;
+    private javax.swing.JLabel AgeJLabel4;
     private javax.swing.JButton backJButton;
     private javax.swing.JButton editJButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel patientNameJLabel;
+    private javax.swing.JTextField personAddressJTextField;
     private javax.swing.JTextField personAgeJTextField;
+    private javax.swing.JTextField personCityJTextField;
+    private javax.swing.JTextField personCommunityJTextField;
     private javax.swing.JTextField personNameJTextField;
+    private javax.swing.JTextField personWeightJTextField;
     private javax.swing.JButton saveJButton;
     // End of variables declaration//GEN-END:variables
 }

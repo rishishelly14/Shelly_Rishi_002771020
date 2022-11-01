@@ -27,13 +27,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="440" max="-2" attributes="0"/>
-              <Component id="editJButton" min="-2" pref="100" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-              <Component id="saveJButton" min="-2" pref="100" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -48,14 +41,28 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="AgeJLabel" alignment="0" max="32767" attributes="0"/>
                                   <Component id="patientNameJLabel" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                  <Component id="AgeJLabel1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="AgeJLabel2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="AgeJLabel3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="AgeJLabel4" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="189" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="personAgeJTextField" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                   <Component id="personNameJTextField" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                  <Component id="personWeightJTextField" min="-2" pref="150" max="-2" attributes="0"/>
+                                  <Component id="personAddressJTextField" min="-2" pref="150" max="-2" attributes="0"/>
+                                  <Component id="personCityJTextField" min="-2" pref="150" max="-2" attributes="0"/>
+                                  <Component id="personCommunityJTextField" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="429" max="-2" attributes="0"/>
+                      <Component id="editJButton" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="saveJButton" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="455" max="32767" attributes="0"/>
@@ -66,23 +73,46 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="personNameJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="patientNameJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="personNameJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="patientNameJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="personAgeJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="AgeJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="AgeJLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="personWeightJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="AgeJLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="AgeJLabel3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="personAddressJTextField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="personCityJTextField" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="personAgeJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="AgeJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="AgeJLabel4" min="-2" max="-2" attributes="0"/>
+                  <Component id="personCommunityJTextField" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="saveJButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="editJButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="183" max="32767" attributes="0"/>
+              <EmptySpace pref="98" max="32767" attributes="0"/>
               <Component id="backJButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
           </Group>
@@ -148,6 +178,34 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveJButtonActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="AgeJLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Weight"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="AgeJLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Address"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="AgeJLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="City"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="AgeJLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Community"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="personWeightJTextField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="personAddressJTextField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="personCityJTextField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="personCommunityJTextField">
     </Component>
   </SubComponents>
 </Form>
